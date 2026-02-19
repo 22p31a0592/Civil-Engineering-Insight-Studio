@@ -1,0 +1,23 @@
+# Web Framework
+Flask==3.0.0
+Flask-CORS==4.0.0
+python-dotenv==1.0.0
+
+# Image Processing
+opencv-python==4.8.1.78
+Pillow==10.1.0
+numpy==1.24.3
+
+# NLP Libraries
+spacy==3.7.2
+transformers==4.35.2
+torch==2.1.1
+sentence-transformers==2.2.2
+
+# Additional ML Libraries
+scikit-learn==1.3.2
+nltk==3.8.1
+
+# Utilities
+Werkzeug==3.0.1
+python-multipart==0.0.6

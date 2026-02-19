@@ -1,0 +1,314 @@
+# ============================================================
+#   Civil Engineering Insight Studio — .gitignore
+#   Covers: Python/Flask backend  +  React/Node frontend
+# ============================================================
+
+
+# ─────────────────────────────────────────────
+# 1. PYTHON / FLASK BACKEND
+# ─────────────────────────────────────────────
+
+# Byte-compiled / optimised / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments — never commit these
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+backend/venv/
+backend/.venv/
+
+# Environment variable files — contain secrets!
+.env
+.env.*
+*.env
+!.env.example        # keep the example template
+
+# pytest / unittest
+.pytest_cache/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+
+# mypy / pyright type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyright/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Flask / Werkzeug instance folder
+instance/
+.webassets-cache
+
+# Uploaded images — user data, can be large
+backend/uploads/
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Generated reports
+backend/reports/
+backend/reports/*
+!backend/reports/.gitkeep
+
+# spaCy downloaded models (large, re-downloaded via pip)
+backend/models/en_core_web_sm*/
+backend/models/*.bin
+backend/models/*.cfg
+
+# Hugging Face / sentence-transformers model cache
+~/.cache/huggingface/
+backend/.cache/
+.cache/
+
+# PyTorch checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+
+# ─────────────────────────────────────────────
+# 2. NODE / REACT FRONTEND
+# ─────────────────────────────────────────────
+
+# Dependencies
+frontend/node_modules/
+node_modules/
+.pnp
+.pnp.js
+
+# Production build output
+frontend/build/
+build/
+
+# Create-React-App cache
+frontend/.cache/
+
+# Testing
+frontend/coverage/
+coverage/
+
+# Misc CRA / tooling
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Parcel cache
+.parcel-cache/
+
+# Next.js (in case the frontend is migrated)
+.next/
+out/
+
+# Storybook
+storybook-static/
+
+
+# ─────────────────────────────────────────────
+# 3. IDEs & EDITORS
+# ─────────────────────────────────────────────
+
+# VS Code
+.vscode/
+!.vscode/extensions.json   # keep recommended extensions list
+
+# JetBrains (PyCharm, WebStorm, IntelliJ …)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+
+# Emacs
+\#*\#
+.\#*
+
+
+# ─────────────────────────────────────────────
+# 4. OPERATING SYSTEM
+# ─────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# ─────────────────────────────────────────────
+# 5. DOCKER & DEPLOYMENT
+# ─────────────────────────────────────────────
+
+# Docker environment overrides
+docker-compose.override.yml
+.dockerenv
+
+# Kubernetes secrets
+*.secret.yaml
+*.secret.yml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# Ansible vault
+*.vault
+
+
+# ─────────────────────────────────────────────
+# 6. LOGS & TEMPORARY FILES
+# ─────────────────────────────────────────────
+
+# Log files
+*.log
+logs/
+backend/logs/
+frontend/logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# SQLite databases (if added later)
+*.sqlite3
+*.db
+
+
+# ─────────────────────────────────────────────
+# 7. SECURITY — NEVER COMMIT THESE
+# ─────────────────────────────────────────────
+
+# Secret / API keys
+secrets/
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.keystore
+
+# AWS credentials
+.aws/
+credentials
+
+# Google Cloud credentials
+gcloud/
+*.json.key
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+
+# ─────────────────────────────────────────────
+# 8. PROJECT-SPECIFIC EXCLUSIONS
+# ─────────────────────────────────────────────
+
+# Large sample / test images checked in by mistake
+*.tiff
+*.bmp
+# Keep PNG/JPG in /docs only — exclude elsewhere
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.jpg
+!docs/**/*.jpeg
+!docs/**/*.png
+!frontend/public/**/*.png
+!frontend/public/**/*.jpg
+!frontend/src/**/*.png
+!frontend/src/**/*.jpg
+
+# Analysis result JSON dumps (generated at runtime)
+analysis_results/
+*.result.json
